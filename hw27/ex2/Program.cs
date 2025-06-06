@@ -1,4 +1,6 @@
-﻿class Program
+﻿namespace hw27.ex1;
+
+class Program
 {
     static void Main(string[] args)
     {

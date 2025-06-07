@@ -1,4 +1,4 @@
-﻿namespace hw27.ex3;
+﻿namespace hw27;
 
 class Program
 {

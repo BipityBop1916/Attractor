@@ -1,6 +1,6 @@
-﻿namespace hw27.ex1;
+﻿namespace hw27.ex2;
 
-class Program
+partial class Program
 {
     static void Main(string[] args)
     {

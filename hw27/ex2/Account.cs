@@ -7,7 +7,7 @@ public class Account
 
     public virtual void ShowInfo()
     {
-        Console.WriteLine($"Account #{Id} - Balance: {Balance}₽");
+        Console.WriteLine($"Account #{Id} - Balance: {Balance}");
     }
 }
 
@@ -15,7 +15,7 @@ public class DepositAccount : Account
 {
     public override void ShowInfo()
     {
-        Console.WriteLine($"[Deposit] #{Id} - Balance: {Balance}₽");
+        Console.WriteLine($"[Deposit] #{Id} - Balance: {Balance}");
     }
 }
 
@@ -23,7 +23,7 @@ public class TransitAccount : Account
 {
     public override void ShowInfo()
     {
-        Console.WriteLine($"[Transit] #{Id} - Balance: {Balance}₽");
+        Console.WriteLine($"[Transit] #{Id} - Balance: {Balance}");
     }
 }
 
@@ -31,6 +31,6 @@ public class ClosedAccount : Account
 {
     public override void ShowInfo()
     {
-        Console.WriteLine($"[Closed] #{Id} - Balance: {Balance}₽ (closed)");
+        Console.WriteLine($"[Closed] #{Id} - Balance: {Balance} (closed)");
     }
 }

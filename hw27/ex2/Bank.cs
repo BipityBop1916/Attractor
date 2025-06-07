@@ -19,8 +19,7 @@ public class Bank<T> where T : Account
             return;
         }
 
-        _accounts[_count] = account;
-        _count++;
+        _accounts[_count++] = account;
     }
 
     public void ShowAccountInfo()

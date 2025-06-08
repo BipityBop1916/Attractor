@@ -4,24 +4,15 @@ public class Lamp
 {
     public bool TurnedOn { get; set; }
 
-    public string GetLampState()
-    {
-        
-    }
+    public string GetLampState() => TurnedOn ? "ON" : "OFF";
 }
 
 public class Cat
 {
-    public string GetCatState()
-    {
-        
-    }
+    public string GetCatState() => "CAT";
 }
 
 public class Man
 {
-    public string GetManState()
-    {
-        
-    }
+    public string GetManState() => "MAN";
 }

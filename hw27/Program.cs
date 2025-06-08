@@ -1,29 +1,22 @@
 ﻿namespace hw27;
 
-public delegate string Status();
+public delegate void Handler(MyMessage message);
 
 
 class Program
 {
     static void Main(string[] args)
     {
-        Lamp lamp = new Lamp();
-        Cat cat = new Cat();
-        Man man = new Man();
-
-        Status reader = lamp.GetLampState;
-        reader += cat.GetCatState;
-        reader += man.GetManState;
+        MessageManager manager = new MessageManager();
+        Phone phone = new Phone();
+        Mail mail = new Mail();
+        MyMessage msg1 = new MyMessage("sms", "sms.txt");
+        MyMessage msg2 = new MyMessage("email", "email.txt");
         
-        ReadState(reader);
-    }
-
-    public static void ReadState(Status status)
-    {
-        foreach (Delegate d in status.GetInvocationList())
-        {
-            string result = (string)d.DynamicInvoke();
-            Console.WriteLine(result);
-        }
+        manager.NewMessage += phone.RecieveSMS;
+        manager.NewMessage += mail.RecieveMail;
+        
+        manager.OnNewMessage(msg1);
+        manager.OnNewMessage(msg2);
     }
 }
